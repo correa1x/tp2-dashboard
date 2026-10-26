@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+# Las tablas crudas pesan ~60 MB; el script las descarga solo si faltan
+data/raw/

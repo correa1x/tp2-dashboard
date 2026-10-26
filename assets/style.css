@@ -1,0 +1,91 @@
+/* Estilos del dashboard — paleta: ultramar #2540D9, tinta #14161A, crema #F4F1E8 */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --azul: #2540D9;
+  --tinta: #14161A;
+  --crema: #F4F1E8;
+  --coral: #E8553A;
+  --borde: rgba(20, 22, 26, 0.08);
+}
+
+body {
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+/* ---------- navbar ---------- */
+.navbar-marca {
+  background: var(--crema) !important;
+  border-bottom: 1px solid var(--borde);
+  padding: 14px 8px;
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(6px);
+}
+.pill-logo {
+  background: var(--azul); color: #fff; border-radius: 999px;
+  padding: 3px 12px; font-weight: 700; letter-spacing: .02em; font-size: .9rem;
+}
+.brand-title { font-weight: 600; font-size: 1.1rem; }
+.nav-paginas .nav-link {
+  color: var(--tinta); border-radius: 999px !important; font-weight: 500; padding: 6px 16px;
+}
+.nav-paginas .nav-link.active { background: var(--tinta) !important; color: var(--crema) !important; }
+
+.contenedor { padding: 24px 24px 8px; max-width: 1500px; }
+
+/* ---------- filtros ---------- */
+.col-filtros { position: relative; }
+.card-filtros {
+  border: none; border-radius: 20px; background: #fff;
+  position: sticky; top: 90px;
+}
+.filtro-label { font-weight: 600; font-size: .85rem; margin: 16px 0 6px; display: block; }
+.texto-periodo { font-family: 'DM Mono', monospace; font-size: .8rem; color: var(--azul); margin-top: 4px; }
+.form-check-input:checked { background-color: var(--azul); border-color: var(--azul); }
+.rc-slider-track { background-color: var(--azul) !important; }
+.rc-slider-handle { border-color: var(--azul) !important; }
+
+/* ---------- textos ---------- */
+.eyebrow {
+  font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .12em;
+  font-size: .72rem; color: var(--azul); margin-bottom: 6px;
+}
+.eyebrow-claro { color: #AFC0FF; }
+.hero { padding: 6px 0 22px; }
+.titulo-hero { font-weight: 600; font-size: clamp(1.7rem, 3.2vw, 2.6rem); line-height: 1.1; max-width: 900px; }
+.titulo-hero em, .card-titulo em { font-family: 'Instrument Serif', serif; font-weight: 400; color: var(--azul); }
+.lead-hero { font-size: 1.05rem; max-width: 760px; color: #44464d; margin: 10px 0 0; }
+
+/* ---------- tarjetas ---------- */
+.card-kpi, .card-grafico { border: none; border-radius: 20px; background: #fff; height: 100%; }
+.kpi-label { font-size: .8rem; color: #6b6d74; }
+.kpi-valor { font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 600; font-family: 'DM Mono', monospace; color: var(--azul); }
+.card-titulo { font-size: 1.15rem; font-weight: 600; margin-bottom: 2px; }
+.card-sub { font-size: .85rem; color: #6b6d74; margin-bottom: 8px; }
+.insight {
+  background: var(--crema); border-radius: 12px; padding: 10px 14px;
+  font-size: .9rem; margin-top: 6px;
+}
+.insight b { color: var(--azul); }
+
+.card-caso { border: none; border-radius: 20px; background: var(--azul); color: #fff; margin-bottom: 24px; }
+.card-titulo.claro { color: #fff; margin-bottom: 16px; }
+.card-caso .num {
+  display: inline-block; font-family: 'DM Mono', monospace; border: 1.5px solid #fff;
+  border-radius: 999px; padding: 1px 10px; margin-bottom: 8px; font-size: .8rem;
+}
+.card-caso p { margin: 0; font-size: .95rem; }
+
+.lista-conclusiones { padding-left: 18px; }
+.lista-conclusiones li { margin-bottom: 8px; }
+
+.footer { font-size: .8rem; color: #6b6d74; padding: 18px 0 26px; }
+.footer a { color: var(--azul); }
+
+/* ---------- móvil ---------- */
+@media (max-width: 991px) {
+  .contenedor { padding: 16px; }
+  .card-filtros { position: static; }
+}

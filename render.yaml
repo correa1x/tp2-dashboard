@@ -1,0 +1,13 @@
+# Despliegue en Render (plan gratuito) — Render lee este archivo automáticamente
+services:
+  - type: web
+    name: tp2-entregas-resenas
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:server --workers 1 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.5
+      - key: DEBUG
+        value: "0"
