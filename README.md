@@ -74,7 +74,7 @@ Para regenerar el dataset limpio desde cero: `python scripts/preparar_datos.py`
 Para correr los tests: `python -m pytest -q`
 
 ## Despliegue
-- **URL:** [link]
+- **URL:** https://tp2-entregas-resenas.onrender.com (plan gratuito: si la app estaba inactiva, la primera carga tarda ~1 min)
 - **Plataforma:** Render (plan gratuito), comando de arranque `gunicorn app:server`
 
 ## Funcionalidades
